@@ -1,0 +1,5 @@
+name: VanillaDrops
+version: ${project.version}
+main: com.github.prypurity.vanilladrops.Main
+authors: [PryPurity]
+description: Change the default parameters of mob drops & Exp.

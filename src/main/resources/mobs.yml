@@ -1,0 +1,63 @@
+Version: 1
+# List of all mobs, up to 1.15.2.
+#
+# PLEASE READ VERY CAREFULLY!!!!
+# PLEASE READ VERY CAREFULLY!!!!
+#
+# TO ALLOW CUSTOM EXP OR DROPS, THE CORRESPONDING SETTING MUST BE SET TO FALSE.
+# Example: Exp must be set to False, to allow CustomEXP to be enabled, otherwise it will throw an error.
+#
+# PLEASE READ VERY CAREFULLY!!!!
+# PLEASE READ VERY CAREFULLY!!!!
+#
+
+# Bats don't drop any exp to begin with, so the default value is not here.
+Bat:
+  CustomExp:
+   Enable: false
+   expMin: 0
+   expMax: 1
+# Vanilla mechanics don't allow babies to give experience upon death... You can now change that, lol
+Bee:
+  Exp: true
+  BreedingExp: true
+  CustomExp:
+    Enable: false
+    expMin: 0
+    expMax: 1
+  CustomBreedExp:
+    Enable: false
+    expMin: 0
+    expMax: 1
+  DeadBabiesDropEXP:
+    Enable: true
+    expMin: 0
+    expMax: 1
+Blaze:
+  BlazeRods: true
+  Exp: true
+  # BlazeRods MUST be set to false before allowing custom amounts.
+  CustomRods:
+    Enable: false
+    amountMin: 0
+    amountMax: 1
+  # Exp MUST be set to false before allowing custom EXP.
+  CustomExp:
+    Enable: false
+    expMin: 0
+    expMax: 1
+Cat:
+  String: true
+  Exp: true
+  CustomString:
+    Enable: false
+    amountMin: 0
+    amountMax: 1
+  CustomExp:
+    Enable: false
+    expMin: 0
+    expMax: 1
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 0
+    expMax: 1
