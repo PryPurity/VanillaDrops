@@ -15,8 +15,8 @@ Version: 1
 Bat:
   CustomExp:
    Enable: false
-   expMin: 0
-   expMax: 1
+   expMin: 1
+   expMax: 2
 # Vanilla mechanics don't allow babies to give experience upon death... You can now change that, lol
 Bee:
   Exp: true
