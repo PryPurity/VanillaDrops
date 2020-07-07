@@ -1,7 +1,6 @@
 package com.github.prypurity.vanilladrops.Listeners;
 
 import com.github.prypurity.vanilladrops.Main;
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
@@ -27,7 +26,7 @@ public enum entitydeathevents implements Listener {
                 de.setDroppedExp(i);
             }
         }
-        if (le instanceof Bee) {
+        if (le.getType() == EntityType.BEE) {
             if (!Main.mobdrops.getBoolean("Bee.Exp")) {
                 de.setDroppedExp(0);
             }

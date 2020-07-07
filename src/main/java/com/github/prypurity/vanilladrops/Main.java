@@ -1,14 +1,12 @@
 package com.github.prypurity.vanilladrops;
 
 import com.github.prypurity.vanilladrops.Listeners.entitydeathevents;
-import de.leonhard.storage.Json;
 import de.leonhard.storage.LightningBuilder;
 import de.leonhard.storage.Yaml;
 import de.leonhard.storage.internal.settings.ConfigSettings;
 import de.leonhard.storage.internal.settings.DataType;
 import de.leonhard.storage.internal.settings.ReloadSettings;
 import org.bukkit.Bukkit;
-import org.bukkit.event.EventHandler;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
