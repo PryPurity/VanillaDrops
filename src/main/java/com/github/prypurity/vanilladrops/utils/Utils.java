@@ -1,6 +1,6 @@
 package com.github.prypurity.vanilladrops.utils;
 
-public abstract class Utils {
+public class Utils {
 
     public static String titleCase(String delimiter, String yes) {
         String[] ar = yes.split(delimiter);

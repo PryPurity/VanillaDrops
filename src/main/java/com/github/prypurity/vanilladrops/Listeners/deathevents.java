@@ -12,7 +12,9 @@ import org.bukkit.event.entity.EntityDeathEvent;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class newdeatheevents implements Listener {
+public enum deathevents implements Listener {
+    INSTANCE;
+
     @EventHandler
     public void onEntityDeath(EntityDeathEvent de) {
         final EntityType entityType = de.getEntityType();
@@ -20,12 +22,23 @@ public class newdeatheevents implements Listener {
         final String typename = Utils.titleCase(" ", entityType.name().toLowerCase().replaceAll("_", " ")) + ".";
         LivingEntity le = de.getEntity();
 
+        if (!Main.mobdrops.getBoolean(typename + "Exp")) {
+            de.setDroppedExp(0);
+        }
         Random r = ThreadLocalRandom.current();
-        if (Main.mobdrops.getBoolean(typename + "CustomExp.Enable")) {
+        if (Main.mobdrops.getBoolean(typename + "CustomExp.Enable") && !Main.mobdrops.getBoolean(typename + "Exp")) {
             int min = Main.mobdrops.getInt(typename + "CustomExp.expMin");
             int max = Main.mobdrops.getInt(typename + "CustomExp.expMax");
             int i = r.nextInt((max - min) + 1) + min;
             de.setDroppedExp(i);
+        }
+        if (entityType == EntityType.BEE) {
+            if (Main.mobdrops.getBoolean("Bee.DeadBabiesDropEXP.Enable")) {
+                int min = Main.mobdrops.getInt("Bee.DeadBabiesDropEXP.expMin");
+                int max = Main.mobdrops.getInt("Bee.DeadBabiesDropEXP.expMax");
+                int i = r.nextInt((max - min) + 1) + min;
+                de.setDroppedExp(i);
+            }
         }
     }
 }

@@ -1,6 +1,7 @@
 package com.github.prypurity.vanilladrops;
 
-import com.github.prypurity.vanilladrops.Listeners.entitydeathevents;
+import com.github.prypurity.vanilladrops.Listeners.deathevents;
+import com.github.prypurity.vanilladrops.Listeners.entitybreedevents;
 import de.leonhard.storage.LightningBuilder;
 import de.leonhard.storage.Yaml;
 import de.leonhard.storage.internal.settings.ConfigSettings;
@@ -40,8 +41,10 @@ public final class Main extends JavaPlugin {
                 .setDataType(DataType.SORTED)
                 .createConfig();
     }
+
     public void setuplistener() {
         PluginManager pm = getServer().getPluginManager();
-        pm.registerEvents(entitydeathevents.INSTANCE, this);
+        pm.registerEvents(deathevents.INSTANCE, this);
+        pm.registerEvents(entitybreedevents.INSTANCE, this);
     }
 }
