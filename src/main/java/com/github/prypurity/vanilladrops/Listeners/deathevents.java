@@ -3,6 +3,7 @@ package com.github.prypurity.vanilladrops.Listeners;
 import com.github.prypurity.vanilladrops.Main;
 import com.github.prypurity.vanilladrops.utils.Utils;
 import de.leonhard.storage.Yaml;
+import org.bukkit.entity.Ageable;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.event.EventHandler;
@@ -21,6 +22,8 @@ public enum deathevents implements Listener {
         final Yaml mobs = Main.mobdrops;
         final String typename = Utils.titleCase(" ", entityType.name().toLowerCase().replaceAll("_", " ")) + ".";
         LivingEntity le = de.getEntity();
+        Ageable age = (Ageable) le;
+        boolean isAdult = age.isAdult();
 
         if (!Main.mobdrops.getBoolean(typename + "Exp")) {
             de.setDroppedExp(0);
@@ -31,6 +34,14 @@ public enum deathevents implements Listener {
             int max = Main.mobdrops.getInt(typename + "CustomExp.expMax");
             int i = r.nextInt((max - min) + 1) + min;
             de.setDroppedExp(i);
+        }
+        if (!isAdult) {
+            if (Main.mobdrops.getBoolean(typename + "DeadBabiesDropEXP.Enable")) {
+                int min = Main.mobdrops.getInt(typename + "DeadBabiesDropEXP.expMin");
+                int max = Main.mobdrops.getInt(typename + "DeadBabiesDropEXP.expMax");
+                int i = r.nextInt((max - min) + 1) + min;
+                de.setDroppedExp(i);
+            }
         }
         if (entityType == EntityType.BEE) {
             if (Main.mobdrops.getBoolean("Bee.DeadBabiesDropEXP.Enable")) {
