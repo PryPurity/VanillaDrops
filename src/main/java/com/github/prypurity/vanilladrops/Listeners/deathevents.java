@@ -23,30 +23,23 @@ public enum deathevents implements Listener {
         final String typename = Utils.titleCase(" ", entityType.name().toLowerCase().replaceAll("_", " ")) + ".";
         LivingEntity le = de.getEntity();
         Ageable age = (Ageable) le;
-        boolean isAdult = age.isAdult();
 
         if (!Main.mobdrops.getBoolean(typename + "Exp")) {
             de.setDroppedExp(0);
         }
         Random r = ThreadLocalRandom.current();
-        if (Main.mobdrops.getBoolean(typename + "CustomExp.Enable") && !Main.mobdrops.getBoolean(typename + "Exp")) {
-            int min = Main.mobdrops.getInt(typename + "CustomExp.expMin");
-            int max = Main.mobdrops.getInt(typename + "CustomExp.expMax");
-            int i = r.nextInt((max - min) + 1) + min;
-            de.setDroppedExp(i);
-        }
-        if (!isAdult) {
-            if (Main.mobdrops.getBoolean(typename + "DeadBabiesDropEXP.Enable")) {
-                int min = Main.mobdrops.getInt(typename + "DeadBabiesDropEXP.expMin");
-                int max = Main.mobdrops.getInt(typename + "DeadBabiesDropEXP.expMax");
+        if (age.isAdult()) {
+            if (Main.mobdrops.getBoolean(typename + "CustomExp.Enable") && !Main.mobdrops.getBoolean(typename + "Exp")) {
+                int min = Main.mobdrops.getInt(typename + "CustomExp.expMin");
+                int max = Main.mobdrops.getInt(typename + "CustomExp.expMax");
                 int i = r.nextInt((max - min) + 1) + min;
                 de.setDroppedExp(i);
             }
         }
-        if (entityType == EntityType.BEE) {
-            if (Main.mobdrops.getBoolean("Bee.DeadBabiesDropEXP.Enable")) {
-                int min = Main.mobdrops.getInt("Bee.DeadBabiesDropEXP.expMin");
-                int max = Main.mobdrops.getInt("Bee.DeadBabiesDropEXP.expMax");
+        if (!age.isAdult()) {
+            if (Main.mobdrops.getBoolean(typename + "DeadBabiesDropEXP.Enable")) {
+                int min = Main.mobdrops.getInt(typename + "DeadBabiesDropEXP.expMin");
+                int max = Main.mobdrops.getInt(typename + "DeadBabiesDropEXP.expMax");
                 int i = r.nextInt((max - min) + 1) + min;
                 de.setDroppedExp(i);
             }
