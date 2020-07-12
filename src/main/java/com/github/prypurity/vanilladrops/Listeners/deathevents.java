@@ -21,26 +21,36 @@ public enum deathevents implements Listener {
         final EntityType entityType = de.getEntityType();
         final Yaml mobs = Main.mobdrops;
         final String typename = Utils.titleCase(" ", entityType.name().toLowerCase().replaceAll("_", " ")) + ".";
+        System.out.println(typename);
         LivingEntity le = de.getEntity();
-        Ageable age = (Ageable) le;
-
         if (!Main.mobdrops.getBoolean(typename + "Exp")) {
             de.setDroppedExp(0);
         }
-        Random r = ThreadLocalRandom.current();
-        if (age.isAdult()) {
+        if (de.getEntity() instanceof Ageable) {
+            if (((Ageable) le).isAdult()) {
+                if (Main.mobdrops.getBoolean(typename + "CustomExp.Enable") && !Main.mobdrops.getBoolean(typename + "Exp")) {
+                    Random r = ThreadLocalRandom.current();
+                    int min = Main.mobdrops.getInt(typename + "CustomExp.expMin");
+                    int max = Main.mobdrops.getInt(typename + "CustomExp.expMax");
+                    int i = r.nextInt(((max - min) + 1) + min);
+                    de.setDroppedExp(i);
+                }
+            }
+            if (!((Ageable) le).isAdult()) {
+                if (Main.mobdrops.getBoolean(typename + "DeadBabiesDropEXP.Enable")) {
+                    Random r = ThreadLocalRandom.current();
+                    int min = Main.mobdrops.getInt(typename + "DeadBabiesDropEXP.expMin");
+                    int max = Main.mobdrops.getInt(typename + "DeadBabiesDropEXP.expMax");
+                    int i = r.nextInt((max - min) + 1) + min;
+                    de.setDroppedExp(i);
+                }
+            }
+        } else {
             if (Main.mobdrops.getBoolean(typename + "CustomExp.Enable") && !Main.mobdrops.getBoolean(typename + "Exp")) {
+                Random r = ThreadLocalRandom.current();
                 int min = Main.mobdrops.getInt(typename + "CustomExp.expMin");
                 int max = Main.mobdrops.getInt(typename + "CustomExp.expMax");
-                int i = r.nextInt((max - min) + 1) + min;
-                de.setDroppedExp(i);
-            }
-        }
-        if (!age.isAdult()) {
-            if (Main.mobdrops.getBoolean(typename + "DeadBabiesDropEXP.Enable")) {
-                int min = Main.mobdrops.getInt(typename + "DeadBabiesDropEXP.expMin");
-                int max = Main.mobdrops.getInt(typename + "DeadBabiesDropEXP.expMax");
-                int i = r.nextInt((max - min) + 1) + min;
+                int i = r.nextInt(((max - min) + 1) + min);
                 de.setDroppedExp(i);
             }
         }
