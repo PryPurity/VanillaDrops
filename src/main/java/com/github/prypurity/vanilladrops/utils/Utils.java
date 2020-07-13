@@ -4,7 +4,7 @@ public class Utils {
 
     public static String titleCase(String delimiter, String yes) {
         String[] ar = yes.split(delimiter);
-        StringBuilder builder = new StringBuilder(delimiter);
+        StringBuilder builder = new StringBuilder();
         for (String s : ar) {
             builder.append(caps(s));
         }

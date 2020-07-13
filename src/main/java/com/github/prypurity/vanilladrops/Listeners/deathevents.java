@@ -19,14 +19,15 @@ public enum deathevents implements Listener {
     @EventHandler
     public void onEntityDeath(EntityDeathEvent de) {
         final EntityType entityType = de.getEntityType();
-        final Yaml mobs = Main.mobdrops;
+        Yaml mobs = Main.mobdrops;
         final String typename = Utils.titleCase(" ", entityType.name().toLowerCase().replaceAll("_", " ")) + ".";
         System.out.println(typename);
         LivingEntity le = de.getEntity();
         if (!Main.mobdrops.getBoolean(typename + "Exp")) {
             de.setDroppedExp(0);
         }
-        if (de.getEntity() instanceof Ageable) {
+        if (le instanceof Ageable) {
+            System.out.println("CHECK TO SEE IF AGEABLE");
             if (((Ageable) le).isAdult()) {
                 if (Main.mobdrops.getBoolean(typename + "CustomExp.Enable") && !Main.mobdrops.getBoolean(typename + "Exp")) {
                     Random r = ThreadLocalRandom.current();
