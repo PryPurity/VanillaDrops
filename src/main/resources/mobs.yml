@@ -14,50 +14,646 @@ Version: 1
 # Bats don't drop any exp to begin with, so the default value is not here.
 Bat:
   CustomExp:
-   Enable: false
-   expMin: 1
-   expMax: 2
+    Enable: false
+    expMin: 1
+    expMax: 2
 # Vanilla mechanics don't allow babies to give experience upon death... You can now change that, lol
 Bee:
   Exp: true
   BreedingExp: true
   CustomExp:
     Enable: false
-    expMin: 0
-    expMax: 1
+    expMin: 1
+    expMax: 2
   CustomBreedExp:
     Enable: false
-    expMin: 0
-    expMax: 1
+    expMin: 1
+    expMax: 2
   DeadBabiesDropEXP:
-    Enable: true
-    expMin: 0
-    expMax: 1
+    Enable: false
+    expMin: 1
+    expMax: 2
 Blaze:
   BlazeRods: true
   Exp: true
   # BlazeRods MUST be set to false before allowing custom amounts.
   CustomRods:
     Enable: false
-    amountMin: 0
-    amountMax: 1
+    amountMin: 1
+    amountMax: 2
   # Exp MUST be set to false before allowing custom EXP.
   CustomExp:
     Enable: false
-    expMin: 0
-    expMax: 1
+    expMin: 1
+    expMax: 2
 Cat:
   String: true
   Exp: true
   CustomString:
     Enable: false
-    amountMin: 0
-    amountMax: 1
+    amountMin: 1
+    amountMax: 2
   CustomExp:
     Enable: false
-    expMin: 0
-    expMax: 1
+    expMin: 1
+    expMax: 2
   DeadBabiesDropEXP:
     Enable: false
-    expMin: 0
-    expMax: 1
+    expMin: 1
+    expMax: 2
+
+CaveSpider:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Chicken:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  CustomBreedExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Cod:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Cow:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  CustomBreedExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Creeper:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Dolphin:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Donkey:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  CustomBreedExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Drowned:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+ElderGuardian:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+EnderDragon:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Enderman:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Endermite:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Evoker:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Fox:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  CustomBreedExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Ghast:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Guardian:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Hoglin:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Horse:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  CustomBreedExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Husk:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Illusioner:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+IronGolem:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Llama:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  CustomBreedExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+MagmaCube:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Mule:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+MushroomCow:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  CustomBreedExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Ocelot:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  CustomBreedExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Panda:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  CustomBreedExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Parrot:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  CustomBreedExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Phantom:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Pig:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  CustomBreedExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Piglin:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Pillager:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+PolarBear:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+PufferFish:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Rabbit:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  CustomBreedExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Ravager:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Salmon:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Sheep:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  CustomBreedExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Shulker:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Silverfish:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Skeleton:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+SkeletonHorse:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Slime:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+SnowMan:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Spider:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Squid:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Stray:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Strider:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  CustomBreedExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+TraderLlama:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+TropicalFish:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Turtle:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  CustomBreedExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Vex:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Villager:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  CustomBreedExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Vindicator:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+WanderingTrader:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Witch:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Wither:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+WitherSkeleton:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Wolf:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Zoglin:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+Zombie:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+ZombieHorse:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+ZombifiedPiglin:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+
+ZombieVillager:
+  Exp: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2

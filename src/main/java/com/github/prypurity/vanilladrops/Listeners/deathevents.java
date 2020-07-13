@@ -27,7 +27,7 @@ public enum deathevents implements Listener {
             de.setDroppedExp(0);
         }
         if (le instanceof Ageable) {
-            System.out.println("CHECK TO SEE IF AGEABLE");
+            //System.out.println("CHECK TO SEE IF AGEABLE");
             if (((Ageable) le).isAdult()) {
                 if (Main.mobdrops.getBoolean(typename + "CustomExp.Enable") && !Main.mobdrops.getBoolean(typename + "Exp")) {
                     Random r = ThreadLocalRandom.current();
