@@ -61,6 +61,10 @@ Cat:
     Enable: false
     expMin: 1
     expMax: 2
+  DeadBabiesDropString:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 CaveSpider:
   Exp: true
@@ -89,6 +93,8 @@ Chicken:
 
 Cod:
   Exp: true
+  DropCod: true
+  DropBoneMeal: true
   CustomExp:
     Enable: false
     expMin: 1
