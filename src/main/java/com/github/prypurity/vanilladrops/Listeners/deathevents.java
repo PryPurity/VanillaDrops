@@ -20,9 +20,9 @@ public enum deathevents implements Listener {
 
     @EventHandler
     public void onEntityDeath(EntityDeathEvent de) {
-        final EntityType entityType = de.getEntityType();
+        EntityType entityType = de.getEntityType();
         Yaml mobs = Main.mobdrops;
-        final String typename = Utils.titleCase(" ", entityType.name().toLowerCase().replaceAll("_", " ")) + ".";
+        String typename = Utils.titleCase(" ", entityType.name().toLowerCase().replaceAll("_", " ")) + ".";
         System.out.println(typename);
         LivingEntity le = de.getEntity();
         if (!Main.mobdrops.getBoolean(typename + "Exp")) {
@@ -57,35 +57,37 @@ public enum deathevents implements Listener {
                 de.setDroppedExp(i);
             }
         }
-
         // Switch case to deal with the mob type drops. Forgive me, for I am new to switch cases. =(
         switch (de.getEntity().getType()) {
             case BLAZE:
-                System.out.println("Blaze it bitches");
-                if (!Main.mobdrops.getBoolean(entityType + "BlazeRods")) {
+                System.out.println("Blaze go kaplooe");
+                if (!Main.mobdrops.getBoolean(typename + "BlazeRods")) {
                     de.getDrops().remove(new ItemStack(Material.BLAZE_ROD));
+                    System.out.println("Blaze Rods are DENIED");
                 }
-                if (Main.mobdrops.getBoolean("CustomRods") && !Main.mobdrops.getBoolean("Blaze.BlazeRods")) {
+                if (Main.mobdrops.getBoolean("CustomRods.Enable") && !Main.mobdrops.getBoolean(typename + "BlazeRods")) {
                     Random r = ThreadLocalRandom.current();
-                    int min = Main.mobdrops.getInt(entityType + "CustomRods.expMin");
-                    int max = Main.mobdrops.getInt(entityType + "CustomRods.expMax");
+                    int min = Main.mobdrops.getInt(typename + "CustomRods.amountMin");
+                    int max = Main.mobdrops.getInt(typename + "CustomRods.amountMax");
                     int i = r.nextInt(((max - min) + 1) + min);
                     de.setDroppedExp(i);
+                    System.out.println("BlazeRods are set to a custom amount!");
                     break;
                 }
+                break;
             case CAT:
                 System.out.println("Boom kitty dead!");
                 if (le instanceof Ageable) {
                     if (((Ageable) le).isAdult()) {
-                        if (!Main.mobdrops.getBoolean(entityType + "String")) {
+                        if (!Main.mobdrops.getBoolean(typename + "String")) {
                             de.getDrops().remove(new ItemStack(Material.STRING));
                             System.out.println("Cat String Disabled!");
                             break;
                         }
-                        if (Main.mobdrops.getBoolean(entityType + "CustomString") && !Main.mobdrops.getBoolean("String")) {
+                        if (Main.mobdrops.getBoolean(typename + "CustomString.Enable") && !Main.mobdrops.getBoolean(typename + "String")) {
                             Random r = ThreadLocalRandom.current();
-                            int min = Main.mobdrops.getInt(entityType + "CustomString.amountMin");
-                            int max = Main.mobdrops.getInt(entityType + "CustomString.amountMax");
+                            int min = Main.mobdrops.getInt(typename + "CustomString.amountMin");
+                            int max = Main.mobdrops.getInt(typename + "CustomString.amountMax");
                             int i = r.nextInt(((max - min) + 1) + min);
                             de.getDrops().add(new ItemStack(Material.STRING, i));
                             System.out.println("Cat String Disabled, now using Custom String!");
@@ -93,15 +95,16 @@ public enum deathevents implements Listener {
                         }
                     }
                     if (!((Ageable) le).isAdult()) {
-                        if (Main.mobdrops.getBoolean(entityType + "DeadBabiesDropString")) {
+                        if (Main.mobdrops.getBoolean(typename + "DeadBabiesDropString")) {
                             Random r = ThreadLocalRandom.current();
-                            int min = Main.mobdrops.getInt(entityType + "DeadBabiesDropString.amountMin");
-                            int max = Main.mobdrops.getInt(entityType + "DeadBabiesDropString.amountMax");
+                            int min = Main.mobdrops.getInt(typename + "DeadBabiesDropString.amountMin");
+                            int max = Main.mobdrops.getInt(typename + "DeadBabiesDropString.amountMax");
                             int i = r.nextInt(((max - min) + 1) + min);
                             de.getDrops().add(new ItemStack(Material.STRING, i));
                             System.out.println("haha, dead babies give string");
                             break;
                         }
+                        break;
                     }
                 }
         }
