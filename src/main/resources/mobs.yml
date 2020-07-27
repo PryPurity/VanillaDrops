@@ -1,5 +1,5 @@
 Version: 1
-# List of all mobs, up to 1.15.2.
+# List of all mobs, up to 1.16.1.
 #
 # PLEASE READ VERY CAREFULLY!!!!
 # PLEASE READ VERY CAREFULLY!!!!
@@ -10,7 +10,8 @@ Version: 1
 # PLEASE READ VERY CAREFULLY!!!!
 # PLEASE READ VERY CAREFULLY!!!!
 #
-
+# For a drop amount reference, please check: https://minecraft.gamepedia.com/Drops#Entity_drops
+#
 # Bats don't drop any exp to begin with, so the default value is not here.
 Bat:
   CustomExp:
@@ -20,7 +21,6 @@ Bat:
 # Vanilla mechanics don't allow babies to give experience upon death... You can now change that, lol
 Bee:
   Exp: true
-  BreedingExp: true
   CustomExp:
     Enable: false
     expMin: 1
@@ -66,8 +66,18 @@ Cat:
     amountMin: 1
     amountMax: 2
 
-CaveSpider:
+Cavespider:
+  SpiderEyes: true
+  String: true
   Exp: true
+  CustomSpiderEyes:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomString:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
   CustomExp:
     Enable: false
     expMin: 1
@@ -76,17 +86,28 @@ CaveSpider:
 Chicken:
   RawChicken: true
   Feathers: true
-  LayEggs: true
   Exp: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
-  CustomBreedExp:
+  CustomChicken:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  CustomFeathers:
     Enable: false
     expMin: 1
     expMax: 2
   DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  DeadBabiesDropChicken:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  DeadBabiesDropFeathers:
     Enable: false
     expMin: 1
     expMax: 2
@@ -103,10 +124,6 @@ Cod:
 Cow:
   Exp: true
   CustomExp:
-    Enable: false
-    expMin: 1
-    expMax: 2
-  CustomBreedExp:
     Enable: false
     expMin: 1
     expMax: 2
@@ -132,10 +149,6 @@ Dolphin:
 Donkey:
   Exp: true
   CustomExp:
-    Enable: false
-    expMin: 1
-    expMax: 2
-  CustomBreedExp:
     Enable: false
     expMin: 1
     expMax: 2
@@ -192,10 +205,6 @@ Fox:
     Enable: false
     expMin: 1
     expMax: 2
-  CustomBreedExp:
-    Enable: false
-    expMin: 1
-    expMax: 2
   DeadBabiesDropEXP:
     Enable: false
     expMin: 1
@@ -225,10 +234,6 @@ Hoglin:
 Horse:
   Exp: true
   CustomExp:
-    Enable: false
-    expMin: 1
-    expMax: 2
-  CustomBreedExp:
     Enable: false
     expMin: 1
     expMax: 2
@@ -264,10 +269,6 @@ Llama:
     Enable: false
     expMin: 1
     expMax: 2
-  CustomBreedExp:
-    Enable: false
-    expMin: 1
-    expMax: 2
   DeadBabiesDropEXP:
     Enable: false
     expMin: 1
@@ -297,10 +298,6 @@ MushroomCow:
     Enable: false
     expMin: 1
     expMax: 2
-  CustomBreedExp:
-    Enable: false
-    expMin: 1
-    expMax: 2
   DeadBabiesDropEXP:
     Enable: false
     expMin: 1
@@ -309,10 +306,6 @@ MushroomCow:
 Ocelot:
   Exp: true
   CustomExp:
-    Enable: false
-    expMin: 1
-    expMax: 2
-  CustomBreedExp:
     Enable: false
     expMin: 1
     expMax: 2
@@ -327,10 +320,6 @@ Panda:
     Enable: false
     expMin: 1
     expMax: 2
-  CustomBreedExp:
-    Enable: false
-    expMin: 1
-    expMax: 2
   DeadBabiesDropEXP:
     Enable: false
     expMin: 1
@@ -339,10 +328,6 @@ Panda:
 Parrot:
   Exp: true
   CustomExp:
-    Enable: false
-    expMin: 1
-    expMax: 2
-  CustomBreedExp:
     Enable: false
     expMin: 1
     expMax: 2
@@ -361,10 +346,6 @@ Phantom:
 Pig:
   Exp: true
   CustomExp:
-    Enable: false
-    expMin: 1
-    expMax: 2
-  CustomBreedExp:
     Enable: false
     expMin: 1
     expMax: 2
@@ -411,10 +392,6 @@ Rabbit:
     Enable: false
     expMin: 1
     expMax: 2
-  CustomBreedExp:
-    Enable: false
-    expMin: 1
-    expMax: 2
   DeadBabiesDropEXP:
     Enable: false
     expMin: 1
@@ -437,10 +414,6 @@ Salmon:
 Sheep:
   Exp: true
   CustomExp:
-    Enable: false
-    expMin: 1
-    expMax: 2
-  CustomBreedExp:
     Enable: false
     expMin: 1
     expMax: 2
@@ -518,10 +491,6 @@ Strider:
     Enable: false
     expMin: 1
     expMax: 2
-  CustomBreedExp:
-    Enable: false
-    expMin: 1
-    expMax: 2
   DeadBabiesDropEXP:
     Enable: false
     expMin: 1
@@ -551,10 +520,6 @@ Turtle:
     Enable: false
     expMin: 1
     expMax: 2
-  CustomBreedExp:
-    Enable: false
-    expMin: 1
-    expMax: 2
   DeadBabiesDropEXP:
     Enable: false
     expMin: 1
@@ -570,10 +535,6 @@ Vex:
 Villager:
   Exp: true
   CustomExp:
-    Enable: false
-    expMin: 1
-    expMax: 2
-  CustomBreedExp:
     Enable: false
     expMin: 1
     expMax: 2

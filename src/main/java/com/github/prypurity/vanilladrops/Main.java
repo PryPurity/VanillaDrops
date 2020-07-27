@@ -1,7 +1,6 @@
 package com.github.prypurity.vanilladrops;
 
 import com.github.prypurity.vanilladrops.Listeners.deathevents;
-import com.github.prypurity.vanilladrops.Listeners.entitybreedevents;
 import de.leonhard.storage.LightningBuilder;
 import de.leonhard.storage.Yaml;
 import de.leonhard.storage.internal.settings.ConfigSettings;
@@ -22,6 +21,7 @@ public final class Main extends JavaPlugin {
         Bukkit.getConsoleSender().sendMessage(" VanillaDrops has been enabled.");
         Bukkit.getConsoleSender().sendMessage(" Developed by: PryPurity ");
         Bukkit.getConsoleSender().sendMessage(" Vi Veri Veniversum Vivus Vici. ");
+        Bukkit.getConsoleSender().sendMessage(" !! Breeding events are only available on Servers 1.10+ !! ");
         Bukkit.getConsoleSender().sendMessage(" ");
         setupshit();
         setuplistener();
@@ -37,7 +37,7 @@ public final class Main extends JavaPlugin {
         mobdrops = LightningBuilder.fromFile(new File("plugins/VanillaDrops/mobs"))
                 .addInputStreamFromResource("mobs.yml")
                 .setConfigSettings(ConfigSettings.PRESERVE_COMMENTS)
-                .setReloadSettings(ReloadSettings.AUTOMATICALLY)
+                .setReloadSettings(ReloadSettings.INTELLIGENT)
                 .setDataType(DataType.SORTED)
                 .createConfig();
     }
@@ -45,6 +45,5 @@ public final class Main extends JavaPlugin {
     public void setuplistener() {
         PluginManager pm = getServer().getPluginManager();
         pm.registerEvents(deathevents.INSTANCE, this);
-        pm.registerEvents(entitybreedevents.INSTANCE, this);
     }
 }
