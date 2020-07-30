@@ -1653,24 +1653,24 @@ public enum deathevents implements Listener {
                         }
                         if (Main.mobdrops.getBoolean(typename + "DeadBabiesDropIronIngot.Enable")) {
                             Random r = ThreadLocalRandom.current();
-                            int min = Main.mobdrops.getInt(typename + "CustomGoldIngot.amountMin");
-                            int max = Main.mobdrops.getInt(typename + "CustomGoldIngot.amountMax");
+                            int min = Main.mobdrops.getInt(typename + "DeadBabiesDropIronIngot.amountMin");
+                            int max = Main.mobdrops.getInt(typename + "DeadBabiesDropIronIngot.amountMax");
                             int i = r.nextInt(((max - min) + 1) + min);
                             de.getDrops().add(new ItemStack(Material.IRON_INGOT, i));
                             break;
                         }
                         if (Main.mobdrops.getBoolean(typename + "DeadBabiesDropCarrot.Enable")) {
                             Random r = ThreadLocalRandom.current();
-                            int min = Main.mobdrops.getInt(typename + "CustomTrident.amountMin");
-                            int max = Main.mobdrops.getInt(typename + "CustomTrident.amountMax");
+                            int min = Main.mobdrops.getInt(typename + "DeadBabiesDropCarrot.amountMin");
+                            int max = Main.mobdrops.getInt(typename + "DeadBabiesDropCarrot.amountMax");
                             int i = r.nextInt(((max - min) + 1) + min);
                             de.getDrops().add(new ItemStack(Material.CARROT, i));
                             break;
                         }
                         if (Main.mobdrops.getBoolean(typename + "DeadBabiesDropPotato.Enable")) {
                             Random r = ThreadLocalRandom.current();
-                            int min = Main.mobdrops.getInt(typename + "CustomFishingRods.amountMin");
-                            int max = Main.mobdrops.getInt(typename + "CustomFishingRods.amountMax");
+                            int min = Main.mobdrops.getInt(typename + "DeadBabiesDropPotato.amountMin");
+                            int max = Main.mobdrops.getInt(typename + "DeadBabiesDropPotato.amountMax");
                             int i = r.nextInt(((max - min) + 1) + min);
                             de.getDrops().add(new ItemStack(Material.POTATO, i));
                             break;
@@ -1823,24 +1823,24 @@ public enum deathevents implements Listener {
                         }
                         if (Main.mobdrops.getBoolean(typename + "DeadBabiesDropIronIngot.Enable")) {
                             Random r = ThreadLocalRandom.current();
-                            int min = Main.mobdrops.getInt(typename + "CustomGoldIngot.amountMin");
-                            int max = Main.mobdrops.getInt(typename + "CustomGoldIngot.amountMax");
+                            int min = Main.mobdrops.getInt(typename + "DeadBabiesDropIronIngot.amountMin");
+                            int max = Main.mobdrops.getInt(typename + "DeadBabiesDropIronIngot.amountMax");
                             int i = r.nextInt(((max - min) + 1) + min);
                             de.getDrops().add(new ItemStack(Material.IRON_INGOT, i));
                             break;
                         }
                         if (Main.mobdrops.getBoolean(typename + "DeadBabiesDropCarrot.Enable")) {
                             Random r = ThreadLocalRandom.current();
-                            int min = Main.mobdrops.getInt(typename + "CustomTrident.amountMin");
-                            int max = Main.mobdrops.getInt(typename + "CustomTrident.amountMax");
+                            int min = Main.mobdrops.getInt(typename + "DeadBabiesDropCarrot.amountMin");
+                            int max = Main.mobdrops.getInt(typename + "DeadBabiesDropCarrot.amountMax");
                             int i = r.nextInt(((max - min) + 1) + min);
                             de.getDrops().add(new ItemStack(Material.CARROT, i));
                             break;
                         }
                         if (Main.mobdrops.getBoolean(typename + "DeadBabiesDropPotato.Enable")) {
                             Random r = ThreadLocalRandom.current();
-                            int min = Main.mobdrops.getInt(typename + "CustomFishingRods.amountMin");
-                            int max = Main.mobdrops.getInt(typename + "CustomFishingRods.amountMax");
+                            int min = Main.mobdrops.getInt(typename + "DeadBabiesDropPotato.amountMin");
+                            int max = Main.mobdrops.getInt(typename + "DeadBabiesDropPotato.amountMax");
                             int i = r.nextInt(((max - min) + 1) + min);
                             de.getDrops().add(new ItemStack(Material.POTATO, i));
                             break;
