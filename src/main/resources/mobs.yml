@@ -1,3 +1,4 @@
+# DO NOT CHANGE THE VERSION
 Version: 1
 # List of all mobs, up to 1.16.1.
 #
@@ -25,34 +26,26 @@ Bee:
     Enable: false
     expMin: 1
     expMax: 2
-  CustomBreedExp:
-    Enable: false
-    expMin: 1
-    expMax: 2
   DeadBabiesDropEXP:
     Enable: false
     expMin: 1
     expMax: 2
 Blaze:
-  BlazeRods: true
   Exp: true
-  # BlazeRods MUST be set to false before allowing custom amounts.
-  CustomRods:
-    Enable: false
-    amountMin: 1
-    amountMax: 2
+  BlazeRods: true
   # Exp MUST be set to false before allowing custom EXP.
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
-Cat:
-  String: true
-  Exp: true
-  CustomString:
+  # BlazeRods MUST be set to false before allowing custom amounts.
+  CustomRods:
     Enable: false
     amountMin: 1
     amountMax: 2
+Cat:
+  Exp: true
+  String: true
   CustomExp:
     Enable: false
     expMin: 1
@@ -61,15 +54,19 @@ Cat:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomString:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
   DeadBabiesDropString:
     Enable: false
     amountMin: 1
     amountMax: 2
 
 Cavespider:
+  Exp: true
   SpiderEyes: true
   String: true
-  Exp: true
   CustomSpiderEyes:
     Enable: false
     amountMin: 1
@@ -84,45 +81,55 @@ Cavespider:
     expMax: 2
 
 Chicken:
+  Exp: true
   RawChicken: true
   Feathers: true
-  Exp: true
   CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  DeadBabiesDropEXP:
     Enable: false
     expMin: 1
     expMax: 2
   CustomChicken:
     Enable: false
-    expMin: 1
-    expMax: 2
+    amountMin: 1
+    amountMax: 2
   CustomFeathers:
     Enable: false
-    expMin: 1
-    expMax: 2
-  DeadBabiesDropEXP:
-    Enable: false
-    expMin: 1
-    expMax: 2
+    amountMin: 1
+    amountMax: 2
   DeadBabiesDropChicken:
     Enable: false
-    expMin: 1
-    expMax: 2
+    amountMin: 1
+    amountMax: 2
   DeadBabiesDropFeathers:
     Enable: false
-    expMin: 1
-    expMax: 2
+    amountMin: 1
+    amountMax: 2
 
 Cod:
   Exp: true
-  DropCod: true
-  DropBoneMeal: true
+  Cod: true
+  Bonemeal: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomCod:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomBonemeal:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 Cow:
   Exp: true
+  RawBeef: true
+  Leather: true
   CustomExp:
     Enable: false
     expMin: 1
@@ -131,23 +138,50 @@ Cow:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomBeef:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomLeather:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropLeather:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropBeef:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 Creeper:
   Exp: true
+  Gunpowder: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomGunpowder:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
+# Dolphins do not normally give EXP.
 Dolphin:
-  Exp: true
+  Cod: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomCod:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 Donkey:
   Exp: true
+  Leather: true
   CustomExp:
     Enable: false
     expMin: 1
@@ -156,21 +190,111 @@ Donkey:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomLeather:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropLeather:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 Drowned:
   Exp: true
+  RottenFlesh: true
+  GoldIngot: true
+  Trident: true
+  FishingRod: true
+  NautilusShell: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomRottenFlesh:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomGoldIngot:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomTrident:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomFishingRods:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomNS:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropRottenFlesh:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropGoldIngot:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropTrident:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropFishingRods:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropNS:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
-ElderGuardian:
+# I actually had no clue Guardians, ElderGuardians & Witches have some of the biggest loot tables in the game. =o
+Elderguardian:
   Exp: true
+  PrismarineShard: true
+  PrismarineCrystal: true
+  Cod: true
+  PufferFish: true
+  Salmon: true
+  TropicalFish: true
+  WetSponge: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomPS:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomPC:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomCod:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomPufferFish:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomSalmon:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomTropicalFish:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomWetSponge:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
+# Enderdragons don't drop anything besides EXP.
 EnderDragon:
   Exp: true
   CustomExp:
@@ -180,11 +304,17 @@ EnderDragon:
 
 Enderman:
   Exp: true
+  EnderPearl: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomEnderPearl:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
+# Endermites only drop EXP as well.
 Endermite:
   Exp: true
   CustomExp:
@@ -194,11 +324,22 @@ Endermite:
 
 Evoker:
   Exp: true
+  TotemOfUndying: true
+  Emeralds: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomToU:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomEmeralds:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
+# TECHNICALLY, Foxes don't actually have a drop table, they drop what they pick up.
 Fox:
   Exp: true
   CustomExp:
@@ -212,27 +353,79 @@ Fox:
 
 Ghast:
   Exp: true
+  GhastTears: true
+  Gunpowder: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomTears:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomGunpowder:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
+# Same as the ElderGuarian, just without the wet sponge.
 Guardian:
   Exp: true
+  PrismarineShard: true
+  PrismarineCrystal: true
+  Cod: true
+  PufferFish: true
+  Salmon: true
+  TropicalFish: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomPS:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomPC:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomCod:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomPufferFish:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomSalmon:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomTropicalFish:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 Hoglin:
   Exp: true
+  PorkChops: true
+  Leather: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomPorkChops:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomLeather:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 Horse:
   Exp: true
+  Leather: true
   CustomExp:
     Enable: false
     expMin: 1
@@ -241,30 +434,17 @@ Horse:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomLeather:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 Husk:
   Exp: true
-  CustomExp:
-    Enable: false
-    expMin: 1
-    expMax: 2
-
-Illusioner:
-  Exp: true
-  CustomExp:
-    Enable: false
-    expMin: 1
-    expMax: 2
-
-IronGolem:
-  Exp: true
-  CustomExp:
-    Enable: false
-    expMin: 1
-    expMax: 2
-
-Llama:
-  Exp: true
+  RottenFlesh: true
+  IronIngot: true
+  Carrot: true
+  Potato: true
   CustomExp:
     Enable: false
     expMin: 1
@@ -273,13 +453,96 @@ Llama:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomRottenFlesh:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomIronIngot:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomCarrot:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomPotato:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropRottenFlesh:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropIronIngot:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropCarrot:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropPotato:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
-MagmaCube:
+Illusioner:
   Exp: true
+  Bow: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomBow:
+    amountMin: 1
+    amountMax: 2
+
+IronGolem:
+  Exp: true
+  IronIngots: true
+  Roses: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  CustomIronIngots:
+    amountMin: 1
+    amountMax: 2
+  CustomRoses:
+    amountMin: 1
+    amountMax: 2
+
+Llama:
+  Exp: true
+  Leather: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  CustomLeather:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropLeather:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+
+MagmaCube:
+  Exp: true
+  Magmacreams: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  CustomMagmacreams:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 Mule:
   Exp: true
@@ -291,9 +554,19 @@ Mule:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomLeather:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropLeather:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
-MushroomCow:
+Mushroomcow:
   Exp: true
+  RawBeef: true
+  Leather: true
   CustomExp:
     Enable: false
     expMin: 1
@@ -302,7 +575,24 @@ MushroomCow:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomBeef:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomLeather:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropLeather:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropBeef:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
+# Ocelots do not have a drop table.
 Ocelot:
   Exp: true
   CustomExp:
@@ -316,6 +606,7 @@ Ocelot:
 
 Panda:
   Exp: true
+  Bamboo: true
   CustomExp:
     Enable: false
     expMin: 1
@@ -324,9 +615,18 @@ Panda:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomBamboo:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropBamboo:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 Parrot:
   Exp: true
+  Feathers: true
   CustomExp:
     Enable: false
     expMin: 1
@@ -335,16 +635,26 @@ Parrot:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomFeathers:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 Phantom:
   Exp: true
+  PhantomMembranes: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomMembranes:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 Pig:
   Exp: true
+  Porkchops: true
   CustomExp:
     Enable: false
     expMin: 1
@@ -353,7 +663,16 @@ Pig:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomPorkchops:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropPorkchops:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
+# Piglins can spawn with armor, so TECHNICALLY it's not really a *drop*.
 Piglin:
   Exp: true
   CustomExp:
@@ -363,13 +682,25 @@ Piglin:
 
 Pillager:
   Exp: true
+  Arrows: true
+  Crossbows: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomArrows:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomCrossBow:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
-PolarBear:
+Polarbear:
   Exp: true
+  Cod: true
+  Salmon: true
   CustomExp:
     Enable: false
     expMin: 1
@@ -378,16 +709,45 @@ PolarBear:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomCod:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomSalmon:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropCod:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropSalmon:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 PufferFish:
   Exp: true
+  Pufferfish: true
+  Bonemeal: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomPufferfish:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomBonemeal:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 Rabbit:
   Exp: true
+  RawRabbit: true
+  RabbitHide: true
+  RabbitsFoot: true
   CustomExp:
     Enable: false
     expMin: 1
@@ -396,23 +756,64 @@ Rabbit:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomRawRabbit:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomRabbitHide:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomRabbitsFoot:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropRawRabbit:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropRabbitHide:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropRabbitsFoot:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 Ravager:
   Exp: true
+  Saddle: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomSaddle:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 Salmon:
   Exp: true
+  Salmon: true
+  Bonemeal: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomSalmon:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomBonemeal:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 Sheep:
   Exp: true
+  Wool: true
+  RawMutton: true
   CustomExp:
     Enable: false
     expMin: 1
@@ -421,14 +822,36 @@ Sheep:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomWool:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomMutton:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropCustomWool:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropCustomMutton:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 Shulker:
   Exp: true
+  ShulkerShells: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomShulkerShells:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
+# Silvershits dont drop anything.
 Silverfish:
   Exp: true
   CustomExp:
@@ -438,55 +861,132 @@ Silverfish:
 
 Skeleton:
   Exp: true
+  Arrows: true
+  Bones: true
+  Bows: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  CustomArrows:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomBones:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomBows:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropArrows:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropBones:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropBows:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 SkeletonHorse:
   Exp: true
+  Bones: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomBones:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropBones:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 Slime:
   Exp: true
+  Slimeballs: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomSlimeballs:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 SnowMan:
   Exp: true
+  Snowballs: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomSnowballs:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 Spider:
   Exp: true
+  SpiderEyes: true
+  String: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomSpiderEyes:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomString:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 Squid:
   Exp: true
+  Inksacs: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomInksacs:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
+# The WIKI says they don't drop bows? Interesting!
 Stray:
   Exp: true
+  Arrows: true
+  Bones: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomArrows:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomBones:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 Strider:
   Exp: true
+  String: true
   CustomExp:
     Enable: false
     expMin: 1
@@ -495,9 +995,18 @@ Strider:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomString:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropString:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
-TraderLlama:
+Traderllama:
   Exp: true
+  Leather: true
   CustomExp:
     Enable: false
     expMin: 1
@@ -506,16 +1015,35 @@ TraderLlama:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomLeather:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropLeather:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
-TropicalFish:
+Tropicalfish:
   Exp: true
+  Tropicalfish: true
+  Bonemeal: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomTropicalfish:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomBonemeal:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 Turtle:
   Exp: true
+  Seagrass: true
   CustomExp:
     Enable: false
     expMin: 1
@@ -524,7 +1052,16 @@ Turtle:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomSeagrass:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesSeagrass:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
+# Vexs have such a low amount of % to actually drop an Iron Sword, not even worth putting it in.
 Vex:
   Exp: true
   CustomExp:
@@ -532,8 +1069,8 @@ Vex:
     expMin: 1
     expMax: 2
 
+# Villagers drop NOTHANGGG WHEN KILLED, not even exp, wow!
 Villager:
-  Exp: true
   CustomExp:
     Enable: false
     expMin: 1
@@ -545,12 +1082,18 @@ Villager:
 
 Vindicator:
   Exp: true
+  Emeralds: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomEmeralds:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
-WanderingTrader:
+# Wiki states that the Potions & Milk are only dropped if the Trader is holding it.
+Wanderingtrader:
   Exp: true
   CustomExp:
     Enable: false
@@ -559,24 +1102,79 @@ WanderingTrader:
 
 Witch:
   Exp: true
+  GlassBottle: true
+  GlowstoneDust: true
+  Gunpowder: true
+  Redstone: true
+  SpiderEye: true
+  Stick: true
+  Sugar: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomGlassBottle:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomGlowstoneDust:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomGunpowder:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomRedstone:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomSpiderEye:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomStick:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomSugar:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 Wither:
   Exp: true
+  NetherStar: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomNetherStar:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
-WitherSkeleton:
+Witherskeleton:
   Exp: true
+  Coal: true
+  Bones: true
+  WitherSkulls: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomCoal:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomBones:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomWitherSkulls:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
 Wolf:
   Exp: true
@@ -591,13 +1189,7 @@ Wolf:
 
 Zoglin:
   Exp: true
-  CustomExp:
-    Enable: false
-    expMin: 1
-    expMax: 2
-
-Zombie:
-  Exp: true
+  Rottenflesh: true
   CustomExp:
     Enable: false
     expMin: 1
@@ -606,24 +1198,163 @@ Zombie:
     Enable: false
     expMin: 1
     expMax: 2
+  CustomRottenflesh:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropRottenFlesh:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
-ZombieHorse:
+Zombie:
   Exp: true
+  RottenFlesh: true
+  IronIngot: true
+  Carrot: true
+  Potato: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  CustomRottenFlesh:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomIronIngot:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomCarrot:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomPotato:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropRottenFlesh:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropIronIngot:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropCarrot:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropPotato:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
-ZombifiedPiglin:
+Zombiehorse:
   Exp: true
+  Rottenflesh: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  CustomRottenflesh:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropRottenflesh:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
 
-ZombieVillager:
+Zombifiedpiglin:
   Exp: true
+  Rottenflesh: true
+  Goldnugget: true
+  Goldingot: true
   CustomExp:
     Enable: false
     expMin: 1
     expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  CustomRottenflesh:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomGoldnugget:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomGoldingot:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropRottenflesh:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropGoldnugget:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropGoldingot:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+
+Zombievillager:
+  Exp: true
+  RottenFlesh: true
+  IronIngot: true
+  Carrot: true
+  Potato: true
+  CustomExp:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  DeadBabiesDropEXP:
+    Enable: false
+    expMin: 1
+    expMax: 2
+  CustomRottenFlesh:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomIronIngot:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomCarrot:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  CustomPotato:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropRottenFlesh:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropIronIngot:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropCarrot:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
+  DeadBabiesDropPotato:
+    Enable: false
+    amountMin: 1
+    amountMax: 2
